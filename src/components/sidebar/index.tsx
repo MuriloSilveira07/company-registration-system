@@ -50,7 +50,7 @@ export default function Sidebar({ collapsed, toggleSidebar }: Props) {
         <div className="flex items-center justify-between mb-6">
 
           {!collapsed && (
-            <h1 className="text-xl font-bold">MSF</h1>
+            <h1 className="text-xl font-bold">CMS</h1>
           )}
 
           <button

@@ -17,7 +17,7 @@ export default function Toolbar({ collapsed, toggleSidebar }: Props) {
       )}
 
       <h1 className="text-lg font-semibold">
-        Sistema MSF
+        Company Management System
       </h1>
 
     </div>
