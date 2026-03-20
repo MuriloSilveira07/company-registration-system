@@ -1,0 +1,128 @@
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   DESIGN TOKENS (variáveis)
+================================ */
+
+:root {
+
+  --bg: #f6f6f6;
+  --surface: #FFFFFF;
+
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+
+  --sidebar: #1E293B;
+
+  --border: #E2E8F0;
+  --text: #0F172A;
+
+  --success: #16A34A;
+  --error: #DC2626;
+
+}
+
+/* ===============================
+   BASE STYLES
+================================ */
+
+@layer base {
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+
+}
+
+/* ===============================
+   COMPONENTS
+================================ */
+
+@layer components {
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    @apply rounded-lg shadow p-6;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+    @apply px-4 py-2 rounded-md font-medium transition;
+  }
+
+  .btn-primary:hover {
+    background: var(--primary-hover);
+  }
+
+  .input-default {
+    border: 1px solid var(--border);
+    background: white;
+    @apply rounded-md p-2 outline-none;
+  }
+
+  .input-default:focus {
+    border-color: var(--primary);
+  }
+
+}
+
+/* ===============================
+   UTILITIES CUSTOM
+================================ */
+
+@layer utilities {
+
+  .bg-sidebar {
+    background: var(--sidebar);
+  }
+
+  .bg-surface {
+    background: var(--surface);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+}
+
+/* ===============================
+   GLOBAL FIXES
+================================ */
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===============================
+   AG GRID CUSTOM
+================================ */
+
+.ag-theme-alpine {
+  --ag-background-color: transparent;
+  --ag-header-background-color: transparent;
+  --ag-odd-row-background-color: transparent;
+  border: none;
+}
